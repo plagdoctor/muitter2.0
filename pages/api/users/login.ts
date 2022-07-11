@@ -40,18 +40,18 @@ async function handler(
     }
 }
 
-export default withApiSession(withHandler({
-    methods: ["POST"], 
-    handler,
-    isPrivate: false
-}));
-
-// export default withHandler(
-// ({
+// export default withApiSession(withHandler({
 //     methods: ["POST"], 
 //     handler,
 //     isPrivate: false
+// }));
 
-// })
-// );
+export default withHandler(
+({
+    methods: ["POST"], 
+    handler,
+    isPrivate: false
+
+})
+);
   
