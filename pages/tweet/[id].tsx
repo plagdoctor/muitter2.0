@@ -4,7 +4,7 @@ import useMutation from "@libs/client/useMutation";
 import { Message, User } from "@prisma/client";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React from "react";
 import useSWR from "swr";
 
 interface TweetWithUser extends Message {

@@ -1,10 +1,10 @@
 
 import Layout from "@components/layout";
 import Tweet from "@components/tweet";
-import useMutation from "@libs/client/useMutation";
+import useUser from "@libs/client/useUser";
 import { Message, User } from "@prisma/client";
 import { NextPage } from "next";
-import React, { useState } from "react";
+import React from "react";
 import useSWR from "swr";
 
 
@@ -22,9 +22,11 @@ interface TweetsResponse {
 
 
 const Home : NextPage = () => { 
+  const {user} = useUser();
 
   const {data} = useSWR<TweetsResponse>("/api/tweet");
 
+  console.log(user);
   return   (
   <Layout hasTabBar seoTitle="main" title="홈">
     

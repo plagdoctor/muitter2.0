@@ -7,9 +7,6 @@ async function handler(
     req:NextApiRequest, res:NextApiResponse<ResponseType>
 ){
     if(req.method === "GET") {
-        const {
-        session: {user}
-        } = req;        
         const tweets = await client.message.findMany({
             
             include: {

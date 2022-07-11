@@ -1,6 +1,6 @@
-import type { NextRequest, NextFetchEvent } from "next/server";
+import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
-export function middleware(req:NextRequest, evt: NextFetchEvent) {
+export function middleware(req:NextRequest) {
     console.log("it works! global middleware.");
     console.log(req.ua);
     if(req.ua?.isBot) {

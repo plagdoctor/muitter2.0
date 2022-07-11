@@ -3,7 +3,6 @@ import Link from "next/link";
 import { cls } from "../libs/client/utils";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import Image from "next/image";
 
 interface LayoutProps {
   title?: string;

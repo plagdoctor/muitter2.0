@@ -22,7 +22,7 @@ const CreateAccount: NextPage = () => {
     // });
     
     const {register, handleSubmit} = useForm<CreateForm>();
-    const [signup, {loading, data, error}] = useMutation<MutationResult>("/api/users/signup");
+    const [signup, { data}] = useMutation<MutationResult>("/api/users/signup");
 
     const onValid = (validForm:CreateForm) => {
         if(validForm.password == validForm.passwordcheck )
