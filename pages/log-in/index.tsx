@@ -32,6 +32,7 @@ const Login: NextPage = () => {
         router.push("/create-account");
     };
     useEffect(() => {
+        console.log("it's login!")
         if(data?.ok){
             router.push("/");
         }
