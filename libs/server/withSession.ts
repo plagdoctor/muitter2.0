@@ -10,7 +10,7 @@ declare module "iron-session" {
 
 const cookieOptions = {
     cookieName: "muittersession",
-    password: process.env.IRON_SESSION_PASSWORD!,
+    password: "qwewqepafhnaefpawefnpweafweafhefpwe",
 };
 
 export function withApiSession(fn:any) {

@@ -24,7 +24,7 @@ async function handler(
                 });
         }
 
-        console.log("it's good to create")
+        console.log("it's good to create", email, name, password)
         const user = await client.user.create({
             data: {
                 name,
@@ -35,9 +35,10 @@ async function handler(
         req.session.user = {
             id : user.id
         };
-
+        console.log("here1")
         await req.session.save();
 
+        console.log("here2")
         return res.json({
         ok:true,
         });
@@ -55,7 +56,6 @@ export default withHandler(
     methods: ["POST"], 
     handler,
     isPrivate: false
-
 })
 );
   
